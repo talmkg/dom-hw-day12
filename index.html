@@ -12,7 +12,9 @@
 
   <body>
     <div>
-      <h1 id="h1change">This is the title of the page</h1>
+      <h1 id="h1change" onclick="makeItClickable()">
+        This is the title of the page
+      </h1>
       <h2>This is the subtitle of the page</h2>
     </div>
 
@@ -58,6 +60,9 @@
     <div>
       <p>And this text is just for the exercise too!</p>
     </div>
+    <center>
+      <img src="https://cdn141.picsart.com/339904297058211.png" width="300px" />
+    </center>
     <script>
       /* EXERCISE 1                                                                                                          DONE ✔️
        Write a function for changing the title of the document in something else.
@@ -74,7 +79,7 @@
       */
 
       const addClassToTitle = function () {};
-      /* EXERCISE 3                                                                                                          50%✔️
+      /* EXERCISE 3                                                                                                          50%✔️  changes only the first p element
        Write a function for changing the text of only the p which are children of a div.
       */
 
@@ -130,18 +135,23 @@
         let newBg = document.getElementsByTagName("ul");
 
         for (i = 0; i < newBg.length; i++) {
-          newBg[i].style.backgroundColor = "10b191";
+          newBg[i].style.backgroundColor = "65ce75";
         }
       };
       paintItGreen();
-      /* EXERCISE 9                                                                                                         NOT YET ❌
+      /* EXERCISE 9                                                                                                         DONE ✔️
        Make the heading of the page change color every time the user clicks on it.
       */
 
       const makeItClickable = function () {
-        //
+        const colorado = document.getElementById("h1change");
+        Math.floor(Math.random() * 255);
+        let red = Math.floor(Math.random() * 255);
+        let green = Math.floor(Math.random() * 255);
+        let blue = Math.floor(Math.random() * 255);
+        let rgb = "rgb(" + red + "," + green + "," + blue + ")";
+        colorado.style.color = rgb;
       };
-
       /* EXERCISE 10                                                                                                         NOT YET ❌
        Change the footer text with something else when the user clicks on it.
       */
